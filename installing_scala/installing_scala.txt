@@ -1,0 +1,16 @@
+Easiest: 
+    You can simply follow the steps outlined at:
+    https://docs.scala-lang.org/getting-started-intellij-track/getting-started-with-scala-in-intellij.html
+
+        Essentially:
+            1.) Install Java 8 JDK
+            2.) Install INTELLIJ
+            3.) Add Scala plugin.
+            4.) Create project and install sdk
+            5.) Write code and run it
+
+
+
+Alternatives:
+    1.) Using SBT : https://docs.scala-lang.org/getting-started-sbt-track/getting-started-with-scala-and-sbt-on-the-command-line.html
+    2.) Installing a Scala kernel to jupyter notebook. 
