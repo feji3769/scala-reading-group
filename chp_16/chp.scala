@@ -158,3 +158,35 @@ l12.partition(_ > 7) // return two lists, one with exp. true and the other with 
 l12.find(_>7) // return first element where exp. evals as true
 l12.takeWhile(_!=8) // takes longest prefix where each element satisfies our exp.
 l12.dropWhile(_!=8) // drops " ^^^^^ "
+l12.span(_ > 7) // combines takeWhile and dropWhile
+
+// forall, exists - all are true, there is at least one that is true
+l12.forall(_ > 5) // are ALL elements > 5
+l12.exists(_ > 8) // is there at least one element > 5
+
+
+
+
+// fold - apply an operation over a list and a single item .
+(l12 /: 3)(_ + _) // add all elements of l12 and also 3 (three is at the top of the tree)
+(l12 :\ 3)(_ + _) // add all the elements of l12 and also 3 (three is at the bottom of the tree)
+
+
+// sortWith - worth the elements of a list using a given expression
+l12.sortWith(_ > _) // sort based on value
+l12.sortWith( _.length > _.length) // sort based on length
+
+
+// list.range, list.fill - ways of creating a list
+val List.range(1,5) // List(1,2,3,4)
+val List.fill(5)('a') // List(a,a,a,a,a)
+val List.fill(2,3)('b') // List(List(b,b,b), List(b,b,b))
+
+
+//list.tabulate - create a list based on a function (list comp. in python?)
+List.tabulate(5)(n=> n * n) // List(0,1,4,9,16)
+
+// list.concat - concat. any number of lists
+List.concat(List(1), List(5,6), List(6,7,7)) // List(1,5,6,6,7,7)
+
+// end of chapter essentially 
